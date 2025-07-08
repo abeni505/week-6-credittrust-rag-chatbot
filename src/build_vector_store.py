@@ -38,7 +38,7 @@ def load_data(file_path: str) -> pd.DataFrame:
     print("Data loaded successfully.")
     return df
 
-def create_text_chunks(df: pd.DataFrame) -> (List[str], List[Dict[str, Any]]):
+def create_text_chunks(df: pd.DataFrame):
     """
     Splits the complaint narratives into smaller text chunks.
 
