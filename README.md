@@ -70,7 +70,8 @@ credittrust_rag_chatbot/
 Open your terminal, navigate to where you want to store the project, and run:
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/abeni505/week-6-credittrust-rag-chatbot.git
+
 cd credittrust_rag_chatbot
 ```
 
@@ -93,6 +94,33 @@ Install all the required packages using the requirements.txt file.
 ```bash
 pip install -r requirements.txt
 ```
+
+
+---
+
+## 🚀 How to Run the Full Pipeline
+
+Follow these steps in order to process the data and launch the web application.
+
+### 🔹 Step 1: Perform EDA and Preprocessing
+
+This step analyzes the raw data and prepares it for our model.
+
+- **Action**: Place the raw `complaints.csv` dataset into the `data/` folder. Then, open and run all the cells in the `notebooks/eda_and_preprocessing.ipynb` Jupyter Notebook.
+- **Output**: This will create the `data/filtered_complaints.csv` file.
+
+---
+
+### 🔹 Step 2: Build the Vector Store
+
+This step converts the cleaned text into a searchable vector database.
+
+- **Action**: Run the following script from your terminal's root project directory:
+
+```bash
+python src/build_vector_store.py
+```
+
 
 
 # 🚀 Task Execution and Deliverables
