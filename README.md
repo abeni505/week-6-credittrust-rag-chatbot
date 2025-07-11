@@ -38,7 +38,8 @@ credittrust_rag_chatbot/
 │
 ├── src/
 │   └── build_vector_store.py      # Script for chunking, embedding, and indexing the data.
-│
+│   └── rag_pipeline.py            # The core logic for retrieval and answer generation.
+├── app.py                         # The main Gradio application file.
 ├── vector_store/
 │   └── ...                        # Persisted ChromaDB or FAISS vector store files.
 │
@@ -152,7 +153,32 @@ python src/build_vector_store.py
   - Indexed these embeddings into **ChromaDB / FAISS**, creating a persistent and efficient vector store.
 - **Outcome**: A set of vector database files were created in the `vector_store/` directory, enabling fast semantic search queries for the chatbot.
 
+#### ✅ 4. Core Logic Implementation and Testing (Task 3)
+
+This step involves the RAG pipeline that retrieves information and generates answers.
+
+### Action
+
+The core logic is contained within: `src/rag_pipeline.py`, You can test the pipeline's functionality directly by running this script from the terminal. This is useful for debugging and for the qualitative evaluation.
+
+Deliverable: The `src/rag_pipeline.py` module itself is the main deliverable. The output from running this script is used to fill out the qualitative evaluation table for the final report.
+
 ---
+
+#### ✅ 5.  Chatbot Application Launch (Task 4)
+This is the final step to initiate the interactive user interface.
+
+### Action: 
+Run the `app.py` script from the terminal:
+
+```bash
+python app.py
+```
+
+Deliverable: The script will initialize a local web server and provide a URL (e.g., http://127.0.0.1:7860). Accessing this URL in a web browser launches the interactive chatbot, which is the final deliverable of the project.
+
+
+
 
 ### 📈 Project Goals Achieved
 
